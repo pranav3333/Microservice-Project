@@ -38,7 +38,7 @@ public class CardsController {
 
     @Operation(
             summary = "Create Card REST API",
-            description = "REST API to create new Card inside EazyBank"
+            description = "REST API to create new Card inside HSBC Bank"
     )
     @ApiResponses({
             @ApiResponse(
