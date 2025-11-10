@@ -25,8 +25,8 @@ import org.springframework.web.bind.annotation.*;
  */
 
 @Tag(
-        name = "CRUD REST APIs for Cards in EazyBank",
-        description = "CRUD REST APIs in EazyBank to CREATE, UPDATE, FETCH AND DELETE card details"
+        name = "CRUD APIS for Accounts in HSBC Bank",
+        description = "CRUD APIS in HSBC Bank to CREATE,UPDATE,FETCH AND DELETE account details"
 )
 @RestController
 @RequestMapping(path = "/api", produces = {MediaType.APPLICATION_JSON_VALUE})

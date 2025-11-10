@@ -16,22 +16,22 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @EnableJpaAuditing(auditorAwareRef = "auditAwareImpl")
 @OpenAPIDefinition(
         info = @Info(
-                title = "Loans microservice REST API Documentation",
-                description = "EazyBank Loans microservice REST API Documentation",
-                version = "v1",
+                title = "Accounts microservice REST API Documentation",
+                description = "HSBC Accounts microservice REST API Documentation",
+                version = "1.0.0",
                 contact = @Contact(
-                        name = "Madan Reddy",
-                        email = "tutor@eazybytes.com",
-                        url = "https://www.eazybytes.com"
+                        name = "Pranav Kurankar",
+                        email = "pranavkurankar@gmail.com",
+                        url = "https://github.com/pranavkurankar"
                 ),
                 license = @License(
                         name = "Apache 2.0",
-                        url = "https://www.eazybytes.com"
+                        url = "https://www.hsbc.com"
                 )
         ),
         externalDocs = @ExternalDocumentation(
-                description = "EazyBank Loans microservice REST API Documentation",
-                url = "https://www.eazybytes.com/swagger-ui.html"
+                description = "HSBC Accounts microservice REST API Documentation",
+                url = "https://www.hsbc.com/swagger-ui.html"
         )
 )
 public class LoansApplication {

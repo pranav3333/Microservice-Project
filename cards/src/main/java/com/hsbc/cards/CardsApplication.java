@@ -15,23 +15,23 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @EntityScan("com.eazybytes.cards.model")*/
 @EnableJpaAuditing(auditorAwareRef = "auditAwareImpl")
 @OpenAPIDefinition(
-		info = @Info(
-				title = "Cards microservice REST API Documentation",
-				description = "EazyBank Cards microservice REST API Documentation",
-				version = "v1",
-				contact = @Contact(
-						name = "Madan Reddy",
-						email = "tutor@eazybytes.com",
-						url = "https://www.eazybytes.com"
-				),
-				license = @License(
-						name = "Apache 2.0",
-						url = "https://www.eazybytes.com"
-				)
-		),
-		externalDocs = @ExternalDocumentation(
-				description = "EazyBank Cards microservice REST API Documentation",
-				url = "https://www.eazybytes.com/swagger-ui.html"
+        info = @Info(
+                title = "Accounts microservice REST API Documentation",
+                description = "HSBC Accounts microservice REST API Documentation",
+                version = "1.0.0",
+                contact = @Contact(
+                        name = "Pranav Kurankar",
+                        email = "pranavkurankar@gmail.com",
+                        url = "https://github.com/pranavkurankar"
+                ),
+                license = @License(
+                        name = "Apache 2.0",
+                        url = "https://www.hsbc.com"
+                )
+        ),
+        externalDocs = @ExternalDocumentation(
+                description = "HSBC Accounts microservice REST API Documentation",
+                url = "https://www.hsbc.com/swagger-ui.html"
 		)
 )
 public class CardsApplication {
