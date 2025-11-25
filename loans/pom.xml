@@ -78,7 +78,7 @@
 
 	<build>
 		<plugins>
-			<plugin>
+            <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
@@ -94,11 +94,9 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-
                     <image>
                         <name>pranav2299/${project.artifactId}:docker</name>
                     </image>
-
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
@@ -107,7 +105,7 @@
 					</excludes>
 				</configuration>
 			</plugin>
-		</plugins>
+        </plugins>
 	</build>
 
 </project>
