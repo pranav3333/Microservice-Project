@@ -90,13 +90,20 @@
 					</annotationProcessorPaths>
 				</configuration>
 			</plugin>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <to>
+                        <image>pranav2299/${project.artifactId}:docker</image>
+                    </to>
+                </configuration>
+            </plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-                    <image>
-                        <name>pranav2299/${project.artifactId}:docker</name>
-                    </image>
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
