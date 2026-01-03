@@ -1,0 +1,11 @@
+build:
+  version: "3.0"
+
+loans:
+  message: "Welcome to HsbcBank loans related Prod APIs "
+  contactDetails:
+    name: "Cyrano Marita - QA Lead"
+    email: "cyrano@hsbcbank.com"
+  onCallSupport:
+    - (785) 545-6565
+    - (853) 546-3467
