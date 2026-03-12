@@ -38,3 +38,9 @@ info:
     name: "accounts"
     description: "HSBC Bank Accounts Application"
     version: "1.0.0"
+
+logging:
+  level:
+    com:
+      hsbc:
+        gatewayserver: DEBUG
