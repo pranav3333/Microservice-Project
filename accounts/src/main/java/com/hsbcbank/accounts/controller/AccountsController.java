@@ -7,6 +7,7 @@ import com.hsbcbank.accounts.dto.CustomerDto;
 import com.hsbcbank.accounts.dto.ErrorResponseDto;
 import com.hsbcbank.accounts.dto.ResponseDto;
 import com.hsbcbank.accounts.service.IAccountsService;
+import io.github.resilience4j.retry.annotation.Retry;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -15,6 +16,8 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
@@ -36,8 +39,10 @@ public class AccountsController {
 
     private final IAccountsService accountsService;
 
-    //    @Value("${build.version}")
-    @Value("${build.version:UNKNOWN}")
+    Logger logger = LoggerFactory.getLogger(AccountsController.class);
+
+        @Value("${build.version}")
+//    @Value("${build.version:UNKNOWN}")
     private String version;
 
     @Autowired
@@ -197,9 +202,17 @@ public class AccountsController {
             )
     }
     )
+    @Retry(name = "getBuildInfo", fallbackMethod = "getBuildInfoFallback")
     @GetMapping("/build-info")
-    public ResponseEntity<String> getVersion() {
-        return ResponseEntity.status(HttpStatus.OK).body(version);
+    public ResponseEntity<String> getBuildInfo() {
+        logger.debug("getBuildInfo() method Invoked");
+        throw new NullPointerException();
+//        return ResponseEntity.status(HttpStatus.OK).body(version);
+    }
+
+    public ResponseEntity<String> getBuildInfoFallback(Throwable throwable) {
+       logger.debug("getBuildInfoFallback() method Invoked");
+        return ResponseEntity.status(HttpStatus.OK).body("0.9");
     }
 
     @Operation(
