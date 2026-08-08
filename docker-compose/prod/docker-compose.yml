@@ -374,7 +374,7 @@ services:
     image: "pranav2299/cards:docker"
     container_name: cards-ms
     ports:
-      - "9000:9000"
+      - "9002:9000"
     healthcheck:
       test: "curl --fail --silent localhost:9000/actuator/health/readiness | grep UP || exit 1"
       interval: 10s
